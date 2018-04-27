@@ -1,3 +1,18 @@
 [submodule "Kha"]
 	path = Kha
 	url = https://github.com/Kode/Kha.git
+[submodule "Libraries/haxe-format-vox"]
+	path = Libraries/haxe-format-vox
+	url = https://github.com/sh-dave/haxe-format-vox.git
+[submodule "Libraries/kex-vox-kha"]
+	path = Libraries/kex-vox-kha
+	url = https://github.com/sh-dave/kex-vox-kha.git
+[submodule "Libraries/kex-vox-iron"]
+	path = Libraries/kex-vox-iron
+	url = https://github.com/sh-dave/kex-vox-iron.git
+[submodule "Libraries/iron"]
+	path = Libraries/iron
+	url = https://github.com/armory3d/iron.git
+[submodule "Libraries/zui"]
+	path = Libraries/zui
+	url = https://github.com/armory3d/zui.git
