@@ -10,7 +10,10 @@ class DebugUi {
 
 	public function new( opts: DebugUiOpts ) {
 		zui.Themes.dark.FILL_WINDOW_BG = true;
-		z = new Zui({ font: opts.font });
+		z = new Zui({
+			font: opts.font,
+			theme: zui.Themes.dark
+		});
 	}
 
 	var z: Zui;
