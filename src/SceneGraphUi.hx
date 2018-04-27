@@ -1,4 +1,4 @@
-package debugui;
+package;
 
 import zui.Id;
 import zui.Zui;

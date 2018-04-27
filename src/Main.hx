@@ -51,7 +51,7 @@ class Main {
 			},
 			function( z ) {
 				if (iron.Scene.active != null) {
-					debugui.SceneGraphUi.renderSceneGraph(z, iron.Scene.active.root);
+					SceneGraphUi.renderSceneGraph(z, iron.Scene.active.root);
 				}
 			}
 		];
@@ -69,6 +69,7 @@ class Main {
 		_lastPreviewed = file;
 
 		var ss = new SceneSetup();
+		
 		kex.vox.IronVoxLoader.loadVoxFromPath(
 			file,
 			voxLoaded.bind(
