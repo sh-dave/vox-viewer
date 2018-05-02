@@ -25,6 +25,7 @@ class DebugUi {
 
 		var g2 = canvas.g2;
 		g2.begin(false);
+			g2.color = kha.Color.White;
 			z.begin(g2);
 				if (z.window(Id.handle(), 0, 0, 256, kha.System.windowHeight())) {
 					for (cmd in cmds) {

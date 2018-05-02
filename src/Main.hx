@@ -33,6 +33,7 @@ class Main {
 
 		// (DK) delay a frame, so registered iron rendering handlers come first
 		kha.Scheduler.addTimeTask(setup, 0);
+		// setup();
 	}
 
 	// TODO (DK) propose for zui.Ext.initPath()?
@@ -41,18 +42,20 @@ class Main {
 		var path = untyped __js__('require ("path");');
 		var root = path.resolve(untyped __js__('__dirname', './'));
 		return root;
+#elseif flash
+		return '';
 #else
 		// return kha.System.systemId == "Windows" ? "C:\\Users" : "/";
 		return Sys.getCwd();
 #end		
 	}
 
-	static function setup() {
-		var fileBrowserHandle = zui.Id.handle({
-			text: initPath(),
-		});
+	static var debugUi: DebugUi = null;
+	static var fileBrowserHandle = zui.Id.handle({ text: initPath() });
 
-		var debugUi = new DebugUi({ font: kha.Assets.fonts.Inconsolata_Bold });
+	static function setup() {
+		debugUi = new DebugUi({ font: kha.Assets.fonts.Inconsolata_Bold });
+
 		debugUi.cmds = [
 			function( z ) {
 				if (z.panel(zui.Id.handle(), 'BROWSE')) {
